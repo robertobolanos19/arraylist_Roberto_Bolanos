@@ -8,12 +8,10 @@ public class ArrayList<E> implements List<E> {
     private E[] data;
     private int size;
 
-    // Default constructor
     public ArrayList() {
         this(DEFAULT_CAPACITY);
     }
 
-    // Constructor with capacity
     @SuppressWarnings("unchecked")
     public ArrayList(int capacity) {
         if (capacity < 0) {
@@ -23,7 +21,6 @@ public class ArrayList<E> implements List<E> {
         size = 0;
     }
 
-    // Constructor from another list
     @SuppressWarnings("unchecked")
     public ArrayList(List<E> otherList) {
         data = (E[]) new Object[otherList.size()];
@@ -113,7 +110,7 @@ public class ArrayList<E> implements List<E> {
     }
 
     @Override
-    public boolean removeAll(List<E> otherList) {
+    public boolean removeAll(utils.List<E> otherList) {
         boolean removed = false;
         for (int i = 0; i < otherList.size(); i++) {
             removed |= remove(otherList.get(i));

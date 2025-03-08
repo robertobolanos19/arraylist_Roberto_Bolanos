@@ -1,7 +1,5 @@
 package utils;
 
-import java.util.List;
-
 public interface List<E> {
     boolean add(E item);
     void add(int index, E item);
